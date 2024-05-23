@@ -8,6 +8,7 @@ gem 'cssbundling-rails'
 gem 'devise'
 gem 'figaro'
 gem 'foreman', github: 'ddollar/foreman'
+gem 'i18n'
 gem 'image_processing', '~> 1.2'
 gem 'jbuilder'
 gem 'jsbundling-rails'
@@ -49,3 +50,5 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
+
+gem 'pundit', '~> 2.3'
