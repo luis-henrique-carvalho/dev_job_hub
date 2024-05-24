@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>App</title>
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <%= csrf_meta_tags %>
-      <%= csp_meta_tag %>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-      <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
-   </head>
-   <body data-scrollbar-auto-hide="n" class="hold-transition sidebar-mini layout-fixed">
-      <div class="wrapper">
-      <%= render "base/header" %>
-      <%= render "base/sidebar" %>
-      <div class="content-wrapper">
-         <div class="content-header">
-            <div class="container-fluid">
+  <head>
+    <title>App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+<body class="hold-transition layout-top-nav">
+   <div class="wrapper">
+        <%= render "base/header" %>
+
+          <!-- Content Wrapper. Contains page content -->
+         <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+               <div class="container">
                <div class="row mb-2">
                   <div class="col-sm-6">
-                     <h1 class="m-0 text-dark">Starter Page</h1>
-                  </div>
-                  <!-- /.col -->
+                     <h1 class="m-0"> Top Navigation <small>Example 3.0</small></h1>
+                  </div><!-- /.col -->
                   <div class="col-sm-6">
                      <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Starter Page</li>
+                     <li class="breadcrumb-item"><a href="#">Home</a></li>
+                     <li class="breadcrumb-item"><a href="#">Layout</a></li>
+                     <li class="breadcrumb-item active">Top Navigation</li>
                      </ol>
-                  </div>
-                  <!-- /.col -->
-               </div>
-               <!-- /.row -->
+                  </div><!-- /.col -->
+               </div><!-- /.row -->
+               </div><!-- /.container-fluid -->
             </div>
-            <!-- /.container-fluid -->
-         </div>
-         <div class="content container-fluid">
+            <!-- /.content-header -->
+
+          <div class="content container-fluid">
             <div class="container-fluid">
-               <%= yield %>
+              <%= yield %>
             </div>
-         </div>
-      </div>
-      <%= render "base/footer" %>
-      <%= render "base/control_sidebar" %>
+          </div>
+        </div>
+        <%= render "base/footer" %>
       <div>
-   </body>
+  </body>
 </html>
