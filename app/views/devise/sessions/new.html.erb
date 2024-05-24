@@ -6,7 +6,7 @@
                 <a href="../../index2.html" class="h1"><b>DevJob</b>HUB</a>
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+                <p class="login-box-msg">Faça login para iniciar sua sessão</p>
                 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                 <div class="form-inputs">
                     <%= f.input :email,
@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-8">
                         <% if devise_mapping.rememberable? %>
-                        <%= f.input :remember_me, as: :boolean, wrapper_html: { class: "icheck-primary" } %>
+                        <%= f.input :remember_me, as: :boolean, label: "Lembre de mim", wrapper_html: { class: "icheck-primary" } %>
                         <% end %>
                     </div>
                     <div class="col-4">
@@ -30,10 +30,10 @@
                 <% end %>
                 <div class="social-auth-links text-center mt-2 mb-3">
                     <a href="#" class="btn btn-block btn-primary">
-                    <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+                    <i class="fab fa-facebook mr-2"></i> Faça login usando o Facebook
                     </a>
                     <a href="#" class="btn btn-block btn-danger">
-                    <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+                    <i class="fab fa-google-plus mr-2"></i> Faça login usando o Google+
                     </a>
                 </div>
                 <!-- /.social-auth-links -->
