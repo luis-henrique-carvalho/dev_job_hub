@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'applicants/index'
+  get 'applicants/new'
   get 'positions/index'
   get 'positions/new'
   get 'positions/edit'
