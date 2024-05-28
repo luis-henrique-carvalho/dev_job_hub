@@ -25,6 +25,15 @@ services:
     depends_on:
       postgres:
         condition: service_started
+    links:
+      - mailcatcher
+
+  mailcatcher:
+    image: yappabe/mailcatcher
+    ports:
+      - "1026:1025" # Alterei para 1026 para SMTP
+      - "1081:1080" # Alterei para 1081 para a interface web
+    command: mailcatcher --no-quit --foreground --ip=0.0.0.0
 
 volumes:
   database:
