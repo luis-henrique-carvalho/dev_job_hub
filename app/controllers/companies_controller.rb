@@ -3,7 +3,9 @@ class CompaniesController < ApplicationController
     @company = current_user.build_company
   end
 
-  def edit; end
+  def edit
+    @company = current_user.company
+  end
 
   def create
     @company = current_user.build_company(company_params)
@@ -17,7 +19,16 @@ class CompaniesController < ApplicationController
     end
   end
 
-  def update; end
+  def update
+    @company = current_user.company
+    if @company.update(company_params)
+      flash[:notice] = 'Company updated successfully'
+      redirect_to root_path
+    else
+      flash[:error] = 'Company not updated'
+      render :edit
+    end
+  end
 
   private
 
