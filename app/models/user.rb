@@ -23,6 +23,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :company
-  validates :company, presence: { message: "already exists" }, on: :create
-
 end
